@@ -1,26 +1,12 @@
 import React, { Component } from 'react';
-import { gql } from 'apollo-boost';
+import AsyncStorage from '@react-native-community/async-storage';
 import { Query } from 'react-apollo';
 
-import { getCurrentLocation } from '../utilities/location';
+// Services and Actions
+import { GET_BUSINESSES } from '../services/yelp';
 
-const GET_DOGS = gql`
-  query search ($latitude: Float!, $longitude: Float!) {
-    search(latitude: $latitude, longitude: $longitude, radius: 800, limit: 50) {
-      total
-      business {
-        id
-        name
-        rating
-        distance
-        coordinates {
-          latitude
-          longitude
-        }
-      }
-    }
-  }
-`;
+// Utilities
+import { getCurrentLocation } from '../utilities/location';
 
 class MapContainer extends Component {
   state = {
@@ -28,11 +14,34 @@ class MapContainer extends Component {
     longitude: null,
   };
 
+  // Component Life Cycle Functions
   componentDidMount() {
     getCurrentLocation().then((coords) => {
-      if (coords) this.setState({ latitude: coords.latitude, longitude: coords.longitude });
+      if (coords) {
+        this.setState({
+          latitude: coords.latitude,
+          longitude: coords.longitude,
+        });
+      }
     });
   }
+
+  // Component Functions
+  _addToBookmarks = async (place) => {
+    let bookmarksArr = [];
+    let isDublicate = false;
+    const bookmarks = await AsyncStorage.getItem('bookmarks');
+
+    if (bookmarks) {
+      bookmarksArr = JSON.parse(bookmarks);
+      isDublicate = bookmarksArr.filter(item => item.id === place.id).length > 0;
+    }
+    if (!isDublicate) {
+      bookmarksArr.push(place);
+    }
+
+    await AsyncStorage.setItem('bookmarks', JSON.stringify(bookmarksArr));
+  };
 
   render() {
     const { children } = this.props;
@@ -41,10 +50,16 @@ class MapContainer extends Component {
     if (!latitude || !longitude) return null;
 
     return (
-      <Query query={GET_DOGS} variables={{ latitude, longitude }}>
-        {({ loading, error, data }) => children && children({
-          latitude, longitude, loading, places: data.search && data.search.business,
-        })}
+      <Query query={GET_BUSINESSES} variables={{ latitude, longitude }}>
+        {({ loading, data }) => children
+          && children({
+            latitude,
+            longitude,
+            loading,
+            places: data.search && data.search.business,
+            addToBookmarks: this._addToBookmarks,
+          })
+        }
       </Query>
     );
   }

@@ -5,7 +5,7 @@ export default EStyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 20,
+    padding: 20,
   },
   title: {
     fontSize: 20,

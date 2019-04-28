@@ -1,25 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Platform } from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
-
-// Services and Actions
-
-// Middleware
-
-// Constants
-
-// Utilities
 
 // Component
 import { MarkerPopover } from '../makerPopover';
 
 import styles from './map.styles';
-
-/*
- *            Props Name        Description                                     Value
- *@props -->  props name here   description here                                Value Type Here
- *
- */
 
 class MapViewComp extends Component {
   constructor(props) {
@@ -31,15 +17,22 @@ class MapViewComp extends Component {
 
   // Component Functions
   _handleOnPressBookmark = (id) => {
-    const { places } = this.props;
-
+    const { places, addToBookmarks } = this.props;
     const place = places.filter(item => item.id === id);
-    console.log('place :', place);
+
+    if (place.length > 0) addToBookmarks(place[0]);
   }
+
+  _handleOnPressCallout = (id) => {
+    if (Platform.OS === 'android') {
+      this._handleOnPressBookmark(id);
+    }
+  }
+
 
   render() {
     const {
-      latitude, longitude, loading, places,
+      latitude, longitude, places,
     } = this.props;
 
     return (
@@ -64,7 +57,7 @@ class MapViewComp extends Component {
                   longitude: place.coordinates.longitude,
                 }}
               >
-                <Callout>
+                <Callout onPress={() => this._handleOnPressCallout(place.id)}>
                   <MarkerPopover
                     id={place.id}
                     name={place.name}

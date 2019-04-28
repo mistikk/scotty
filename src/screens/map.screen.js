@@ -11,7 +11,7 @@ import { MapView } from '../components/map';
 const MapScreen = () => (
   <MapContainer>
     {({
-      latitude, longitude, loading, places,
+      latitude, longitude, loading, places, addToBookmarks,
     }) => {
       if (latitude && longitude) {
         return (
@@ -20,6 +20,7 @@ const MapScreen = () => (
             longitude={longitude}
             loading={loading}
             places={places}
+            addToBookmarks={addToBookmarks}
           />
         );
       }

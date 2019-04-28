@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Platform } from 'react-native';
 
 // Component
 import styles from './makerPopover.styles';
@@ -12,11 +12,16 @@ const MakerPopoverView = ({
     <Text style={styles.title}>{name}</Text>
     <Text>{`Distance : ${parseInt(distance, 10)}`}</Text>
     <Text>{`Rating : ${rating}`}</Text>
-    <Button
-      style={styles.button}
-      text="Add to bookmarks"
-      onPress={() => handleOnPressBookmark(id)}
-    />
+    {(Platform.OS === 'android') ? (
+      <Text>Click here to dd to bookmarks</Text>
+    ) : (
+      <Button
+        style={styles.button}
+        text="Add to bookmarks"
+        onPress={() => handleOnPressBookmark(id)}
+      />
+    )}
+
   </View>
 );
 

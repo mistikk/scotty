@@ -12,6 +12,8 @@ EStyleSheet.build({
 
   $primaryBlue: '#00B2FF',
   $white: '#FFFFFF',
+  $grayBackground: '#c1c5c7',
+  $starYellow: '#F6CB2E',
 });
 
 export default class App extends Component {
