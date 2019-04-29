@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Maker Popover Component > Android > render the component 1`] = `
+<View>
+  <Text>
+    test
+  </Text>
+  <Text>
+    Distance : 4
+  </Text>
+  <Text>
+    Rating : 3
+  </Text>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+      Add to bookmarks
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Maker Popover Component > iOS > render the component 1`] = `
+<View>
+  <Text>
+    test
+  </Text>
+  <Text>
+    Distance : 4
+  </Text>
+  <Text>
+    Rating : 3
+  </Text>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+      Add to bookmarks
+    </Text>
+  </View>
+</View>
+`;

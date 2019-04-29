@@ -3,11 +3,6 @@ import React from 'react';
 import MapContainer from '../containers/map.container';
 import { MapView } from '../components/map';
 
-/* Props
- * ------------------------------------------------
- *   @prop { type }    name                - Description....
- */
-
 const MapScreen = () => (
   <MapContainer>
     {({

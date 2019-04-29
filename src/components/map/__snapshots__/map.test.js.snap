@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map Component > Callout onClick for Android platform 1`] = `
+<View>
+  <MapView
+    followsUserLocation={true}
+    initialRegion={
+      Object {
+        "latitude": 37.785834,
+        "latitudeDelta": 0.01,
+        "longitude": -122.406417,
+        "longitudeDelta": 0.01,
+      }
+    }
+    showsMyLocationButton={true}
+  >
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 37.7853008468227,
+          "longitude": -122.403918653727,
+        }
+      }
+    >
+      <Callout
+        onPress={[Function]}
+      >
+        <View>
+          <Text>
+            Tropisueno
+          </Text>
+          <Text>
+            Distance : 227
+          </Text>
+          <Text>
+            Rating : 4
+          </Text>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              Add to bookmarks
+            </Text>
+          </View>
+        </View>
+      </Callout>
+    </Marker>
+  </MapView>
+</View>
+`;

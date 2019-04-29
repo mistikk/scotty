@@ -5,7 +5,7 @@ import styles from './tag.styles';
 
 const Tag = ({ value }) => (
   <View style={styles.textWrapper}>
-    <Text style={[styles.text]}>{value}</Text>
+    <Text style={styles.text}>{value}</Text>
   </View>
 );
 

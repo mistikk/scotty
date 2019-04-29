@@ -1,0 +1,336 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookmarkList Component > render component with data 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    data={
+      Array [
+        Object {
+          "categories": Array [
+            Object {
+              "alias": "chinese",
+            },
+            Object {
+              "alias": "noodles",
+            },
+          ],
+          "coordinates": Object {
+            "latitude": 37.784236,
+            "longitude": -122.406566,
+          },
+          "distance": 178.1710908248786,
+          "id": "TCUfp_AdAQv-g7aD6ktEEQ",
+          "name": "M Y China",
+          "rating": 3.5,
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          bounceOnMount={false}
+          disable={false}
+          leftActionActivationDistance={125}
+          leftActionReleaseAnimationConfig={null}
+          leftActionReleaseAnimationFn={null}
+          leftButtonWidth={75}
+          leftButtonsActivationDistance={75}
+          leftButtonsCloseReleaseAnimationConfig={null}
+          leftButtonsCloseReleaseAnimationFn={null}
+          leftButtonsOpenReleaseAnimationConfig={null}
+          leftButtonsOpenReleaseAnimationFn={null}
+          onLayout={[Function]}
+          onLeftActionActivate={[Function]}
+          onLeftActionComplete={[Function]}
+          onLeftActionDeactivate={[Function]}
+          onLeftActionRelease={[Function]}
+          onLeftButtonsActivate={[Function]}
+          onLeftButtonsCloseComplete={[Function]}
+          onLeftButtonsCloseRelease={[Function]}
+          onLeftButtonsDeactivate={[Function]}
+          onLeftButtonsOpenComplete={[Function]}
+          onLeftButtonsOpenRelease={[Function]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onPanAnimatedValueRef={[Function]}
+          onRef={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onRightActionActivate={[Function]}
+          onRightActionComplete={[Function]}
+          onRightActionDeactivate={[Function]}
+          onRightActionRelease={[Function]}
+          onRightButtonsActivate={[Function]}
+          onRightButtonsCloseComplete={[Function]}
+          onRightButtonsCloseRelease={[Function]}
+          onRightButtonsDeactivate={[Function]}
+          onRightButtonsOpenComplete={[Function]}
+          onRightButtonsOpenRelease={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          onSwipeComplete={[Function]}
+          onSwipeMove={[Function]}
+          onSwipeRelease={[Function]}
+          onSwipeStart={[Function]}
+          rightActionActivationDistance={125}
+          rightActionReleaseAnimationConfig={null}
+          rightActionReleaseAnimationFn={null}
+          rightButtonWidth={75}
+          rightButtonsActivationDistance={75}
+          rightButtonsCloseReleaseAnimationConfig={null}
+          rightButtonsCloseReleaseAnimationFn={null}
+          rightButtonsOpenReleaseAnimationConfig={null}
+          rightButtonsOpenReleaseAnimationFn={null}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              undefined,
+            ]
+          }
+          swipeReleaseAnimationConfig={
+            Object {
+              "duration": 250,
+              "easing": [Function],
+              "toValue": Object {
+                "x": 0,
+                "y": 0,
+              },
+            }
+          }
+          swipeReleaseAnimationFn={[Function]}
+          swipeStartMinDistance={15}
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "transform": Array [
+                  Object {
+                    "translateX": 0.5,
+                  },
+                ],
+              }
+            }
+          >
+            <View>
+              <View>
+                <Text>
+                  M Y China
+                </Text>
+                <View>
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "fontFamily": "Material Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "fontFamily": "Material Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "fontFamily": "Material Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "fontFamily": "Material Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        undefined,
+                        Object {
+                          "fontFamily": "Material Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+              <View>
+                <View>
+                  <Text>
+                    chinese
+                  </Text>
+                </View>
+                <View>
+                  <Text>
+                    noodles
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginRight": -0,
+                "transform": Array [
+                  Object {
+                    "translateX": 0.5,
+                  },
+                ],
+                "width": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "transform": Array [
+                    Object {
+                      "translateX": 0,
+                    },
+                  ],
+                  "width": 0,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={null}
+              >
+                <Text
+                  style={null}
+                >
+                  Delete
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;
+
+exports[`BookmarkList Component > render empty component 1`] = `
+<View>
+  <Text>
+    Empty :(
+  </Text>
+</View>
+`;
