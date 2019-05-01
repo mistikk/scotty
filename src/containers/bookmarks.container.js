@@ -27,7 +27,7 @@ class BookmarksContainer extends Component {
 
     if (bookmarks) {
       const bookmarksArr = JSON.parse(bookmarks);
-      this.setState({ bookmarks: bookmarksArr });
+      await this.setState({ bookmarks: bookmarksArr });
       setParams({ title: bookmarksArr.length });
     }
   };
@@ -40,7 +40,7 @@ class BookmarksContainer extends Component {
     );
 
     await AsyncStorage.setItem('bookmarks', JSON.stringify(newBookmarks));
-    this._getBookmarks();
+    await this._getBookmarks();
   };
 
   render() {

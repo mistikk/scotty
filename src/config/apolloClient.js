@@ -1,9 +1,10 @@
 import ApolloClient from 'apollo-boost';
+import Config from 'react-native-config';
 
 export const apolloClient = new ApolloClient({
-  uri: 'https://api.yelp.com/v3/graphql',
+  uri: Config.API_URL,
   headers: {
     'accept-language': 'tr_TR',
-    authorization: 'Bearer t9uA3FNAHNJHfZeEEFeMmxPgcEVL5HhpMdohdhMWBxlazea-AZJLjsTVYUJNS8WZdZLe-eiAVV6cToNDOuODuxkrnL3aqrRiZTxnTJT3Fq_8oWQvD113P8tlwALDXHYx',
+    authorization: `Bearer ${Config.TOKEN}`,
   },
 });
